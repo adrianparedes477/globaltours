@@ -27,9 +27,9 @@ namespace Infraestructura.Datos
         public async Task<IReadOnlyList<Lugar>> GetLugaresAsync()
         {
             return await _db.Lugar
-                    .Include(p=>p.Pais)
-                    .Include(c=>c.Categoria)
-                    .ToListAsync();
+                            .Include(p =>p.Pais)
+                            .Include(c =>c.Categoria)
+                            .ToListAsync();
         }
     }
 }
